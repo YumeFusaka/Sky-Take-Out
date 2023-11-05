@@ -12,6 +12,9 @@ import org.apache.ibatis.annotations.Select;
 @Mapper
 public interface DishMapper {
 
+    @AutoFill(value = OperationType.UPDATE)
+    void update(Dish dish) ;
+
     /**
      * 根据分类id查询菜品数量
      * @param categoryId
