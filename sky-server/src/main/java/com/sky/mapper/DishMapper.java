@@ -9,14 +9,17 @@ import com.sky.vo.DishVO;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
 
+import java.util.List;
+
 @Mapper
 public interface DishMapper {
 
     @AutoFill(value = OperationType.UPDATE)
-    void update(Dish dish) ;
+    void update(Dish dish);
 
     /**
      * 根据分类id查询菜品数量
+     *
      * @param categoryId
      * @return
      */
@@ -33,4 +36,9 @@ public interface DishMapper {
     Dish getById(Long id);
 
     void deleteById(Long id);
+
+    List<Dish> list(Dish dish);
+
+    @Select("select a.* from dish a left join setmeal_dish b on a.id = b.dish_id where b.setmeal_id = #{setmealId}")
+    List<Dish> getBySetmealId(Long setmealId);
 }

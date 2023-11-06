@@ -11,3 +11,8 @@ sky:
     access-key-id: LTAI5tDjt2bfBt1za8BoyF8J
     access-key-secret: Irozt5ni0GzXqjQ2ITrbmzF7RD4mrN
     bucket-name: yumefusaka
+  redis:
+    host: localhost
+    port: 6379
+    password: j
+    database: 0
