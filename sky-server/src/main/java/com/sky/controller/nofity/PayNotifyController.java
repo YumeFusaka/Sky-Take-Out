@@ -1,4 +1,4 @@
-package com.sky.controller.user;
+package com.sky.controller.nofity;
 
 import com.alibaba.druid.support.json.JSONUtils;
 import com.alibaba.fastjson.JSON;
